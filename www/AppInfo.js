@@ -1,6 +1,5 @@
-module.exports = {
+var exec = require('cordova/exec');
 
-	getInfo : function(successCallback, errorCallback){
-		cordova.exec(successCallback, errorCallback, "AppInfo", "getInfo", []);
-	}
+module.exports = function(successCallback, errorCallback){
+	return exec(successCallback, errorCallback, "AppInfo", "getInfo", []);
 };

@@ -5,9 +5,9 @@ Get information about the native application wrapping your html app, such as the
 
 Supported platfroms
 ===
-Cordova command line >= 3.0.
-Android and iOS. WP8 is on its way.
++ Cordova command line >= 3.0.
++ Android and iOS. WP8 is on its way.
 
 Installation
 ===
-cordova plugins add 'gitrepo'
+cordova plugins add 'https://github.com/welldone-software/cordova-plugin-app-info.git'

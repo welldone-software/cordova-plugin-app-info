@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="welldonesoftware.cordova.plugins.AppInfo"
-    version="0.0.1">
+    version="0.9.0">
 
   <name>AppInfo</name>
 	<author>danikenan@gmail.com</author>
@@ -14,7 +14,7 @@
 	<license>MIT</license>
 
 	<js-module src="www/AppInfo.js" name="AppInfo">
-   		<clobbers target="AppInfo" />
+   		<clobbers target="cordova.getAppInfo" />
 	</js-module>
 
 	<engines>
