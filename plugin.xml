@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="welldonesoftware.cordova.plugins.AppInfo"
+    version="0.0.1">
+
+  <name>AppInfo</name>
+	<author>danikenan@gmail.com</author>
+
+	<description>
+		Get information about the native application wrapping your html app, such as the app version, name, displayName and build (debug/release) status.
+	</description>
+
+	<license>MIT</license>
+
+	<js-module src="www/AppInfo.js" name="AppInfo">
+   		<clobbers target="AppInfo" />
+	</js-module>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+
+
+	<platform name="android">
+
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="AppInfo" >
+				<param name="android-package" value="welldonesoftware.cordova.plugins.appInfo.AppInfoPlugin"/>
+				<param name="onload" value="true"/>
+			</feature>
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+		</config-file>
+
+		<source-file src="src/android/AppInfoPlugin.java" target-dir="src/welldonesoftware/cordova/plugins/appInfo/" />
+
+	</platform>
+
+
+	<platform name="ios">
+
+		<config-file target="config.xml" parent="/*">
+			<feature name="AppInfo">
+				<param name="ios-package" value="AppInfoPlugin"/>
+			</feature>
+		</config-file>
+
+		<source-file src="src/ios/AppInfoPlugin.m" />
+		<header-file src="src/ios/AppInfoPlugin.h" />
+
+	</platform>
+
+
+</plugin>
