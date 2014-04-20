@@ -28,9 +28,9 @@ public class AppInfoPlugin extends CordovaPlugin {
 				JSONObject result = new JSONObject();
 				
 				result.put("version", packageInfo.versionName);
-				result.put("name", packageInfo.applicationInfo.name);
+				result.put("name", activity.getPackageName());
 				result.put("displayName", packageManager.getApplicationLabel(packageInfo.applicationInfo));
-				result.put("debubg", debug);
+				result.put("debug", debug);
 				
 				callbackContext.success(result);
 				

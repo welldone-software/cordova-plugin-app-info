@@ -12,7 +12,7 @@
     
     NSString * displayName = NSBundle.mainBundle.infoDictionary[@"CFBundleDisplayName"];
     BOOL debug = NO;
-#if DEBUG
+#ifdef DEBUG
     debug = YES;
 #endif
     
